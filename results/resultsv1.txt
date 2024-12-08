@@ -1,0 +1,473 @@
+Loaded master_9_sites data:
+         Date Stream        Si  ...   SWE_tavg  Tair_f_tavg     TWS_tavg
+0  1974-01-15    WS2  2.575601  ...  16.704277   266.244080  2017.674805
+1  1974-02-15    WS2  2.771926  ...  21.366982   257.965607  2020.702759
+2  1974-03-15    WS2  2.379275  ...   1.525050   267.575745  1968.178467
+3  1974-04-15    WS2  2.145555  ...   0.000000   277.816742  2015.714722
+4  1974-05-15    WS2  2.383950  ...   0.000000   283.276062  1986.314331
+
+[5 rows x 10 columns]
+Loaded master_9_sites data shape: (172301, 10)
+Loaded static data:
+    Stream  drainSqKm  ...  land_wetland  land_evergreen_broadleaf_forest
+0  CU11.6M    2338.00  ...      0.000000                              0.0
+1  Lookout      62.42  ...      0.000000                              0.0
+2   Kolyma  650000.00  ...     19.966409                              0.0
+3      LMP     479.20  ...      0.000000                              0.0
+4       Q1       0.07  ...      0.000000                              0.0
+
+[5 rows x 18 columns]
+Loaded static data shape: (9, 18)
+Merged data:
+    Stream  drainSqKm  elevation_mean_m  ...  SWE_tavg  Tair_f_tavg     TWS_tavg
+0  CU11.6M     2338.0        216.883582  ...  0.000000   291.896512  1537.101163
+1  CU11.6M     2338.0        216.883582  ...  0.000000   291.775943  1525.215410
+2  CU11.6M     2338.0        216.883582  ...  0.000000   296.202340  1524.535190
+3  CU11.6M     2338.0        216.883582  ...  0.000000   299.243566  1505.652055
+4  CU11.6M     2338.0        216.883582  ...  0.021731   278.846527  1607.760099
+
+[5 rows x 27 columns]
+Merged data shape: (172301, 27)
+Reordered columns in merged data:
+    Stream  drainSqKm  elevation_mean_m  ...  Tair_f_tavg     TWS_tavg     Si
+0  CU11.6M     2338.0        216.883582  ...   291.896512  1537.101163  5.130
+1  CU11.6M     2338.0        216.883582  ...   291.775943  1525.215410  3.830
+2  CU11.6M     2338.0        216.883582  ...   296.202340  1524.535190  3.520
+3  CU11.6M     2338.0        216.883582  ...   299.243566  1505.652055  3.970
+4  CU11.6M     2338.0        216.883582  ...   278.846527  1607.760099  3.451
+
+[5 rows x 27 columns]
+Reordered columns in merged data shape: (172301, 27)
+Mapped stream names to integers:
+   Stream  drainSqKm  elevation_mean_m  ...  Tair_f_tavg     TWS_tavg     Si
+0       1     2338.0        216.883582  ...   291.896512  1537.101163  5.130
+1       1     2338.0        216.883582  ...   291.775943  1525.215410  3.830
+2       1     2338.0        216.883582  ...   296.202340  1524.535190  3.520
+3       1     2338.0        216.883582  ...   299.243566  1505.652055  3.970
+4       1     2338.0        216.883582  ...   278.846527  1607.760099  3.451
+
+[5 rows x 27 columns]
+Mapped stream names to integers shape: (172301, 27)
+Reordered columns to move 'Date' to the front:
+         Date  Stream  drainSqKm  ...  Tair_f_tavg     TWS_tavg     Si
+0  1993-05-03       1     2338.0  ...   291.896512  1537.101163  5.130
+1  1993-06-01       1     2338.0  ...   291.775943  1525.215410  3.830
+2  1993-06-14       1     2338.0  ...   296.202340  1524.535190  3.520
+3  1993-06-28       1     2338.0  ...   299.243566  1505.652055  3.970
+4  1993-11-10       1     2338.0  ...   278.846527  1607.760099  3.451
+
+[5 rows x 27 columns]
+Reordered columns to move 'Date' to the front shape: (172301, 27)
+Split data by stream:
+Stream 1:
+         Date  Stream  drainSqKm  ...  Tair_f_tavg     TWS_tavg     Si
+0  1993-05-03       1     2338.0  ...   291.896512  1537.101163  5.130
+1  1993-06-01       1     2338.0  ...   291.775943  1525.215410  3.830
+2  1993-06-14       1     2338.0  ...   296.202340  1524.535190  3.520
+3  1993-06-28       1     2338.0  ...   299.243566  1505.652055  3.970
+4  1993-11-10       1     2338.0  ...   278.846527  1607.760099  3.451
+
+[5 rows x 27 columns]
+Stream 1 shape: (19354, 27)
+Stream 4:
+             Date  Stream  drainSqKm  ...  Tair_f_tavg    TWS_tavg    Si
+19354  2005-05-31       4      62.42  ...   286.384552  901.948608  7.95
+19355  2005-06-20       4      62.42  ...   289.619843  837.972717  8.17
+19356  2005-07-11       4      62.42  ...   288.936127  759.919983  8.64
+19357  2005-08-23       4      62.42  ...   289.222748  568.328003  9.20
+19358  2005-09-12       4      62.42  ...   284.401337  523.154053  8.96
+
+[5 rows x 27 columns]
+Stream 4 shape: (17961, 27)
+Stream 2:
+             Date  Stream  drainSqKm  ...  Tair_f_tavg     TWS_tavg        Si
+37315  2003-08-26       2   650000.0  ...   278.328028  1185.351446  2.304485
+37316  2004-06-11       2   650000.0  ...   281.136954  1211.443062  1.837044
+37317  2004-06-15       2   650000.0  ...   280.667904  1210.758382  1.935206
+37318  2004-06-25       2   650000.0  ...   281.917686  1221.308588  2.056741
+37319  2004-07-15       2   650000.0  ...   281.489671  1217.462087  2.603647
+
+[5 rows x 27 columns]
+Stream 2 shape: (18768, 27)
+Stream 3:
+             Date  Stream  drainSqKm  ...  Tair_f_tavg    TWS_tavg        Si
+56083  2002-09-03       3      479.2  ...   291.193939  887.575409  1.135162
+56084  2002-10-01       3      479.2  ...   285.015137  901.437195  1.090853
+56085  2002-10-08       3      479.2  ...   281.897476  938.813660  1.162877
+56086  2002-10-15       3      479.2  ...   279.206177  928.727142  1.020454
+56087  2002-10-18       3      479.2  ...   279.868088  929.382751  2.338822
+
+[5 rows x 27 columns]
+Stream 3 shape: (18257, 27)
+Stream 9:
+             Date  Stream  drainSqKm  ...  Tair_f_tavg     TWS_tavg         Si
+74340  1987-01-05       9       0.07  ...   295.649292  1193.550781  14.958117
+74341  1987-01-13       9       0.07  ...   296.141968  1199.801392  16.594161
+74342  1987-01-20       9       0.07  ...   295.289429  1183.984741  16.033231
+74343  1987-01-27       9       0.07  ...   295.091675  1170.830078  16.594161
+74344  1987-02-03       9       0.07  ...   296.781189  1156.774292  16.453928
+
+[5 rows x 27 columns]
+Stream 9 shape: (17892, 27)
+Stream 6:
+             Date  Stream  drainSqKm  ...  Tair_f_tavg     TWS_tavg         Si
+92232  2000-10-29       6       27.0  ...   275.745026   856.572021  14.864628
+92233  2000-12-06       6       27.0  ...   274.508423   891.100708  14.958117
+92234  2001-01-03       6       27.0  ...   273.564819   898.427002  13.929746
+92235  2001-01-31       6       27.0  ...   269.263519   952.010498  13.509049
+92236  2001-03-08       6       27.0  ...   273.280121  1049.628662  13.135096
+
+[5 rows x 27 columns]
+Stream 6 shape: (18257, 27)
+Stream 7:
+              Date  Stream  drainSqKm  ...  Tair_f_tavg     TWS_tavg        Si
+110489  2000-01-03       7    36705.0  ...   267.213226  1529.446533  1.098487
+110490  2000-01-10       7    36705.0  ...   272.025421  1537.892395  0.560929
+110491  2000-02-02       7    36705.0  ...   266.612457  1556.954895  1.098487
+110492  2000-02-14       7    36705.0  ...   270.702988  1565.306641  0.514185
+110493  2000-03-02       7    36705.0  ...   269.231430  1575.058167  1.098487
+
+[5 rows x 27 columns]
+Stream 7 shape: (18840, 27)
+Stream 5:
+              Date  Stream  drainSqKm  ...  Tair_f_tavg     TWS_tavg        Si
+129329  1995-12-31       5     3053.0  ...     0.000000     0.000000  1.238719
+129330  1996-09-16       5     3053.0  ...   278.368940  2083.914185  1.215347
+129331  1996-10-14       5     3053.0  ...   275.584652  2107.784094  1.262091
+129332  1997-05-05       5     3053.0  ...   273.470789  2347.884938  1.215347
+129333  1998-12-15       5     3053.0  ...   273.196487  2223.133358  1.308835
+
+[5 rows x 27 columns]
+Stream 5 shape: (18623, 27)
+Stream 8:
+              Date  Stream  drainSqKm  ...  Tair_f_tavg     TWS_tavg        Si
+147952  1974-01-15       8      0.156  ...   266.244080  2017.674805  2.575601
+147953  1974-02-15       8      0.156  ...   257.965607  2020.702759  2.771926
+147954  1974-03-15       8      0.156  ...   267.575745  1968.178467  2.379275
+147955  1974-04-15       8      0.156  ...   277.816742  2015.714722  2.145555
+147956  1974-05-15       8      0.156  ...   283.276062  1986.314331  2.383950
+
+[5 rows x 27 columns]
+Stream 8 shape: (24349, 27)
+NaN or zero count in 1: 18953
+19354
+NaN or zero count in 4: 17722
+17961
+NaN or zero count in 2: 18664
+18768
+NaN or zero count in 3: 17486
+18257
+NaN or zero count in 9: 16579
+17892
+NaN or zero count in 6: 17918
+18257
+NaN or zero count in 7: 18356
+18840
+NaN or zero count in 5: 18363
+18623
+NaN or zero count in 8: 23732
+24349
+Sorted by date and extracted year, month, day:
+Stream 1:
+       Stream  drainSqKm  elevation_mean_m  ...  Year  Month  Day
+13878       1     2338.0        216.883582  ...  1970      1    1
+13879       1     2338.0        216.883582  ...  1970      1    2
+13880       1     2338.0        216.883582  ...  1970      1    3
+13881       1     2338.0        216.883582  ...  1970      1    4
+13882       1     2338.0        216.883582  ...  1970      1    5
+
+[5 rows x 29 columns]
+Stream 1 shape after sorting and extracting date components: (19354, 29)
+Stream 4:
+       Stream  drainSqKm  elevation_mean_m  ...  Year  Month  Day
+28189       4      62.42       1017.787879  ...  1970      1    1
+28190       4      62.42       1017.787879  ...  1970      1    2
+28191       4      62.42       1017.787879  ...  1970      1    3
+28192       4      62.42       1017.787879  ...  1970      1    4
+28193       4      62.42       1017.787879  ...  1970      1    5
+
+[5 rows x 29 columns]
+Stream 4 shape after sorting and extracting date components: (17961, 29)
+Stream 2:
+       Stream  drainSqKm  elevation_mean_m  ...  Year  Month  Day
+44493       2   650000.0        510.676326  ...  1970      1    1
+44494       2   650000.0        510.676326  ...  1970      1    2
+44495       2   650000.0        510.676326  ...  1970      1    3
+44496       2   650000.0        510.676326  ...  1970      1    4
+44497       2   650000.0        510.676326  ...  1970      1    5
+
+[5 rows x 29 columns]
+Stream 2 shape after sorting and extracting date components: (18768, 29)
+Stream 3:
+       Stream  drainSqKm  elevation_mean_m  ...  Year  Month  Day
+67154       3      479.2        117.387921  ...  1970      1    1
+67155       3      479.2        117.387921  ...  1970      1    2
+67156       3      479.2        117.387921  ...  1970      1    3
+67157       3      479.2        117.387921  ...  1970      1    4
+67158       3      479.2        117.387921  ...  1970      1    5
+
+[5 rows x 29 columns]
+Stream 3 shape after sorting and extracting date components: (18257, 29)
+Stream 9:
+       Stream  drainSqKm  elevation_mean_m  ...  Year  Month  Day
+86026       9       0.07             366.0  ...  1970      1    1
+86027       9       0.07             366.0  ...  1970      1    2
+86028       9       0.07             366.0  ...  1970      1    3
+86029       9       0.07             366.0  ...  1970      1    4
+86030       9       0.07             366.0  ...  1970      1    5
+
+[5 rows x 29 columns]
+Stream 9 shape after sorting and extracting date components: (17892, 29)
+Stream 6:
+        Stream  drainSqKm  elevation_mean_m  ...  Year  Month  Day
+102888       6       27.0       2185.311475  ...  1970      1    1
+102889       6       27.0       2185.311475  ...  1970      1    2
+102890       6       27.0       2185.311475  ...  1970      1    3
+102891       6       27.0       2185.311475  ...  1970      1    4
+102892       6       27.0       2185.311475  ...  1970      1    5
+
+[5 rows x 29 columns]
+Stream 6 shape after sorting and extracting date components: (18257, 29)
+Stream 7:
+        Stream  drainSqKm  elevation_mean_m  ...  Year  Month  Day
+118742       7    36705.0        238.420323  ...  1970      1    1
+118743       7    36705.0        238.420323  ...  1970      1    2
+118744       7    36705.0        238.420323  ...  1970      1    3
+118745       7    36705.0        238.420323  ...  1970      1    4
+118746       7    36705.0        238.420323  ...  1970      1    5
+
+[5 rows x 29 columns]
+Stream 7 shape after sorting and extracting date components: (18840, 29)
+Stream 5:
+        Stream  drainSqKm  elevation_mean_m  ...  Year  Month  Day
+140652       5     3053.0        724.589393  ...  1970      1    1
+140653       5     3053.0        724.589393  ...  1970      1    2
+140654       5     3053.0        724.589393  ...  1970      1    3
+140655       5     3053.0        724.589393  ...  1970      1    4
+140656       5     3053.0        724.589393  ...  1970      1    5
+
+[5 rows x 29 columns]
+Stream 5 shape after sorting and extracting date components: (18623, 29)
+Stream 8:
+        Stream  drainSqKm  elevation_mean_m  ...  Year  Month  Day
+170842       8      0.156             619.0  ...  1970      1    1
+170843       8      0.156             619.0  ...  1970      1    2
+170844       8      0.156             619.0  ...  1970      1    3
+170845       8      0.156             619.0  ...  1970      1    4
+170846       8      0.156             619.0  ...  1970      1    5
+
+[5 rows x 29 columns]
+Stream 8 shape after sorting and extracting date components: (24349, 29)
+Scaled data:
+Stream 1:
+       Stream  drainSqKm  elevation_mean_m  ...  Year  Month  Day
+13878       1        0.0               0.0  ...  1970      1    1
+13879       1        0.0               0.0  ...  1970      1    2
+13880       1        0.0               0.0  ...  1970      1    3
+13881       1        0.0               0.0  ...  1970      1    4
+13882       1        0.0               0.0  ...  1970      1    5
+
+[5 rows x 29 columns]
+Stream 1 shape after scaling: (19354, 29)
+Stream 4:
+       Stream  drainSqKm  elevation_mean_m  ...  Year  Month  Day
+28189       4        0.0               0.0  ...  1970      1    1
+28190       4        0.0               0.0  ...  1970      1    2
+28191       4        0.0               0.0  ...  1970      1    3
+28192       4        0.0               0.0  ...  1970      1    4
+28193       4        0.0               0.0  ...  1970      1    5
+
+[5 rows x 29 columns]
+Stream 4 shape after scaling: (17961, 29)
+Stream 2:
+       Stream  drainSqKm  elevation_mean_m  ...  Year  Month  Day
+44493       2        0.0               0.0  ...  1970      1    1
+44494       2        0.0               0.0  ...  1970      1    2
+44495       2        0.0               0.0  ...  1970      1    3
+44496       2        0.0               0.0  ...  1970      1    4
+44497       2        0.0               0.0  ...  1970      1    5
+
+[5 rows x 29 columns]
+Stream 2 shape after scaling: (18768, 29)
+Stream 3:
+       Stream  drainSqKm  elevation_mean_m  ...  Year  Month  Day
+67154       3        0.0               0.0  ...  1970      1    1
+67155       3        0.0               0.0  ...  1970      1    2
+67156       3        0.0               0.0  ...  1970      1    3
+67157       3        0.0               0.0  ...  1970      1    4
+67158       3        0.0               0.0  ...  1970      1    5
+
+[5 rows x 29 columns]
+Stream 3 shape after scaling: (18257, 29)
+Stream 9:
+       Stream  drainSqKm  elevation_mean_m  ...  Year  Month  Day
+86026       9        0.0               0.0  ...  1970      1    1
+86027       9        0.0               0.0  ...  1970      1    2
+86028       9        0.0               0.0  ...  1970      1    3
+86029       9        0.0               0.0  ...  1970      1    4
+86030       9        0.0               0.0  ...  1970      1    5
+
+[5 rows x 29 columns]
+Stream 9 shape after scaling: (17892, 29)
+Stream 6:
+        Stream  drainSqKm  elevation_mean_m  ...  Year  Month  Day
+102888       6        0.0               0.0  ...  1970      1    1
+102889       6        0.0               0.0  ...  1970      1    2
+102890       6        0.0               0.0  ...  1970      1    3
+102891       6        0.0               0.0  ...  1970      1    4
+102892       6        0.0               0.0  ...  1970      1    5
+
+[5 rows x 29 columns]
+Stream 6 shape after scaling: (18257, 29)
+Stream 7:
+        Stream  drainSqKm  elevation_mean_m  ...  Year  Month  Day
+118742       7        0.0               0.0  ...  1970      1    1
+118743       7        0.0               0.0  ...  1970      1    2
+118744       7        0.0               0.0  ...  1970      1    3
+118745       7        0.0               0.0  ...  1970      1    4
+118746       7        0.0               0.0  ...  1970      1    5
+
+[5 rows x 29 columns]
+Stream 7 shape after scaling: (18840, 29)
+Stream 5:
+        Stream  drainSqKm  elevation_mean_m  ...  Year  Month  Day
+140652       5        0.0               0.0  ...  1970      1    1
+140653       5        0.0               0.0  ...  1970      1    2
+140654       5        0.0               0.0  ...  1970      1    3
+140655       5        0.0               0.0  ...  1970      1    4
+140656       5        0.0               0.0  ...  1970      1    5
+
+[5 rows x 29 columns]
+Stream 5 shape after scaling: (18623, 29)
+Stream 8:
+        Stream  drainSqKm  elevation_mean_m  ...  Year  Month  Day
+170842       8        0.0               0.0  ...  1970      1    1
+170843       8        0.0               0.0  ...  1970      1    2
+170844       8        0.0               0.0  ...  1970      1    3
+170845       8        0.0               0.0  ...  1970      1    4
+170846       8        0.0               0.0  ...  1970      1    5
+
+[5 rows x 29 columns]
+Stream 8 shape after scaling: (24349, 29)
+Split into train and test sets:
+Train dataframe for stream 1: (15483, 29)
+Train dataframe for stream 1 shape: (15483, 29)
+Train dataframe for stream 4: (14368, 29)
+Train dataframe for stream 4 shape: (14368, 29)
+Train dataframe for stream 2: (15014, 29)
+Train dataframe for stream 2 shape: (15014, 29)
+Train dataframe for stream 3: (14605, 29)
+Train dataframe for stream 3 shape: (14605, 29)
+Train dataframe for stream 9: (14313, 29)
+Train dataframe for stream 9 shape: (14313, 29)
+Train dataframe for stream 6: (14605, 29)
+Train dataframe for stream 6 shape: (14605, 29)
+Train dataframe for stream 7: (15072, 29)
+Train dataframe for stream 7 shape: (15072, 29)
+Train dataframe for stream 5: (14898, 29)
+Train dataframe for stream 5 shape: (14898, 29)
+Train dataframe for stream 8: (19479, 29)
+Train dataframe for stream 8 shape: (19479, 29)
+Test dataframe for stream 1: (3871, 29)
+Test dataframe for stream 1 shape: (3871, 29)
+Test dataframe for stream 4: (3593, 29)
+Test dataframe for stream 4 shape: (3593, 29)
+Test dataframe for stream 2: (3754, 29)
+Test dataframe for stream 2 shape: (3754, 29)
+Test dataframe for stream 3: (3652, 29)
+Test dataframe for stream 3 shape: (3652, 29)
+Test dataframe for stream 9: (3579, 29)
+Test dataframe for stream 9 shape: (3579, 29)
+Test dataframe for stream 6: (3652, 29)
+Test dataframe for stream 6 shape: (3652, 29)
+Test dataframe for stream 7: (3768, 29)
+Test dataframe for stream 7 shape: (3768, 29)
+Test dataframe for stream 5: (3725, 29)
+Test dataframe for stream 5 shape: (3725, 29)
+Test dataframe for stream 8: (4870, 29)
+Test dataframe for stream 8 shape: (4870, 29)
+Created sequences:
+Number of train sequences for stream 1: 15473
+Number of train sequences for stream 4: 14358
+Number of train sequences for stream 2: 15004
+Number of train sequences for stream 3: 14595
+Number of train sequences for stream 9: 14303
+Number of train sequences for stream 6: 14595
+Number of train sequences for stream 7: 15062
+Number of train sequences for stream 5: 14888
+Number of train sequences for stream 8: 19469
+Number of test sequences for stream 1: 3861
+Number of test sequences for stream 4: 3583
+Number of test sequences for stream 2: 3744
+Number of test sequences for stream 3: 3642
+Number of test sequences for stream 9: 3569
+Number of test sequences for stream 6: 3642
+Number of test sequences for stream 7: 3758
+Number of test sequences for stream 5: 3715
+Number of test sequences for stream 8: 4860
+Number of train sequences for stream '1': 15473
+1 : 266
+Number of train sequences for stream '4': 14358
+4 : 75
+Number of train sequences for stream '2': 15004
+2 : 49
+Number of train sequences for stream '3': 14595
+3 : 438
+Number of train sequences for stream '9': 14303
+9 : 967
+Number of train sequences for stream '6': 14595
+6 : 191
+Number of train sequences for stream '7': 15062
+7 : 296
+Number of train sequences for stream '5': 14888
+5 : 139
+Number of train sequences for stream '8': 19469
+8 : 520
+Number of test sequences for stream '1': 3861
+1 : 134
+Number of test sequences for stream '4': 3583
+4 : 163
+Number of test sequences for stream '2': 3744
+2 : 55
+Number of test sequences for stream '3': 3642
+3 : 332
+Number of test sequences for stream '9': 3569
+9 : 344
+Number of test sequences for stream '6': 3642
+6 : 148
+Number of test sequences for stream '7': 3758
+7 : 188
+Number of test sequences for stream '5': 3715
+5 : 121
+Number of test sequences for stream '8': 4860
+8 : 97
+Filtered sequences:
+Number of filtered train sequences for stream 1: 266
+Number of filtered train sequences for stream 4: 75
+Number of filtered train sequences for stream 2: 49
+Number of filtered train sequences for stream 3: 438
+Number of filtered train sequences for stream 9: 967
+Number of filtered train sequences for stream 6: 191
+Number of filtered train sequences for stream 7: 296
+Number of filtered train sequences for stream 5: 139
+Number of filtered train sequences for stream 8: 520
+Number of filtered test sequences for stream 1: 134
+Number of filtered test sequences for stream 4: 163
+Number of filtered test sequences for stream 2: 55
+Number of filtered test sequences for stream 3: 332
+Number of filtered test sequences for stream 9: 344
+Number of filtered test sequences for stream 6: 148
+Number of filtered test sequences for stream 7: 188
+Number of filtered test sequences for stream 5: 121
+Number of filtered test sequences for stream 8: 97
+Number of filtered train sequences: 2941
+Number of filtered test sequences: 1582
+Converted sequences to tensors.
+Ensured target tensors are 1-dimensional if they are scalars.
+Stacked tensors.
+X_train shape: torch.Size([2941, 10, 29])
+y_train shape: torch.Size([2941, 1])
+X_test shape: torch.Size([1582, 10, 29])
+y_test shape: torch.Size([1582, 1])
+Scaled target values.
+torch.Size([2941, 10, 29]) torch.Size([2941, 1]) torch.Size([1582, 10, 29]) torch.Size([1582, 1])
