@@ -61,13 +61,11 @@ model = LSTMModel(input_size, hidden_size, num_layers, output_size).cuda()
 print(model)
 
 # Train the model
+train_model(model, train_loader, num_epochs, learning_rate, model_path)
+            
 
 model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
-local_train_loader = torch.load(train_loader_path, map_location=torch.device('cpu'))
-local_X_train = torch.load(X_train_path, map_location=torch.device('cpu'))
-local_y_train = torch.load(y_train_path, map_location=torch.device('cpu'))
-local_X_test = torch.load(X_test_path, map_location=torch.device('cpu'))
-local_y_test = torch.load(y_test_path, map_location=torch.device('cpu'))
+print(f"Model loaded from {model_path}")
 
 # Fetch the train_loader from local into a new variable local_train_loader
 local_train_loader = torch.load(train_loader_path)
