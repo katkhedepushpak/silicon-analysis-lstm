@@ -11,12 +11,19 @@ def plot_results(model_path, X_train, y_train, X_test, y_test, scaler_target, y_
     model = LSTMModel(input_size=29, hidden_size=1024, num_layers=2, output_size=1).to(device)
     model.load_state_dict(torch.load(model_path))
     
+
     model.eval()
 
     # Move input tensors to the same device as the model
     X_train = X_train.to(device)
     X_test = X_test.to(device)
 
+    # print top 10 elements from X_train, y_train, X_test, y_test
+    print(X_train[:10])
+    print(y_train[:10])
+    print(X_test[:10])
+    print(y_test[:10])
+    
     with torch.no_grad():
         y_train_pred = model(X_train).cpu().numpy()
         y_pred = model(X_test).cpu().numpy()
